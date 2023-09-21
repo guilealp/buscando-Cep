@@ -1,6 +1,8 @@
 import React, {useState, ChangeEvent, FormEvent, useEffect} from "react";
 
 import  Styles  from '../App.module.css';
+import Footer from "./Footer";
+import Header from "./Header";
 
 const BuscaCep = () => {
 
@@ -34,6 +36,8 @@ const BuscaCep = () => {
 
     return(
         <div>
+            <Header/>
+            <main className={Styles.main}>
             <form onSubmit={findCep}>
                 <label htmlFor="cep">CEP</label>
                 <input type="text" name="cep" id="cep" onChange={submitForm}/>
@@ -43,6 +47,8 @@ const BuscaCep = () => {
             <p>Estado: {uf}</p> 
             <p>cep: {cep}</p> 
             <p className={Styles.error}>{erro}</p>
+            </main>
+            <Footer/>
         </div>
     )
 }

@@ -11,3 +11,6 @@
 .error{
     color: red;
 }
+input{
+    border-radius: 45px;
+}
